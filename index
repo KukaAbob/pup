@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="quiz-container" class="card">
+            <div class="header">
+                <div class="question-counter">
+                    <h2>Вопрос <span id="current-question">1</span>/20</h2>
+                </div>
+                <div class="timer">
+                    Осталось: <span id="time">30:00</span>
+                </div>
+            </div>
+
+            <div class="content">
+                <p id="question-text"></p>
+                <div id="options" class="options-grid"></div>
+            </div>
+
+            <div class="navigation">
+                <button id="prev-btn" class="btn btn-secondary">Предыдущий</button>
+                <button id="next-btn" class="btn btn-primary">Следующий</button>
+                <button id="finish-btn" class="btn btn-primary" style="display: none;">Завершить</button>
+            </div>
+        </div>
+
+        <div id="results" class="card" style="display: none;">
+            <h2>Результаты</h2>
+            <div class="score-container">
+                <p>Правильных ответов: <span id="score">0</span>/20</p>
+                <div id="percentage"></div>
+            </div>
+            <div id="review"></div>
+            <div class="center">
+                <button id="restart-btn" class="btn btn-primary">Начать заново</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

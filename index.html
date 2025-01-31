@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="quiz-container" class="card">
+            <div class="header">
+                <div class="question-counter">
+                    <h2>Вопрос <span id="current-question" class="accent">1</span><span class="dim">/20</span></h2>
+                </div>
+                <div class="timer">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="timer-icon"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    <span id="time" class="accent">30:00</span>
+                </div>
+            </div>
+
+            <div class="content">
+                <p id="question-text" class="question"></p>
+                <div id="options" class="options-grid"></div>
+            </div>
+
+            <div class="navigation">
+                <button id="prev-btn" class="btn btn-secondary" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    Предыдущий
+                </button>
+                <button id="next-btn" class="btn btn-primary">
+                    Следующий
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+                <button id="finish-btn" class="btn btn-primary" style="display: none;">Завершить</button>
+            </div>
+        </div>
+
+        <div id="results" class="card" style="display: none;">
+            <h2 class="gradient-text">Результаты</h2>
+            <div class="score-container">
+                <div class="score-card">
+                    <p class="score-text">
+                        Правильных ответов: <span id="score" class="accent">0</span><span class="dim">/20</span>
+                    </p>
+                    <div id="percentage" class="percentage"></div>
+                </div>
+            </div>
+            <div id="review" class="review-container"></div>
+            <div class="center">
+                <button id="restart-btn" class="btn btn-primary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>
+                    Начать заново
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
